@@ -352,7 +352,7 @@ class Updater(DiagnosticTaskVector):
         da = DiagnosticArray()
         da.header.stamp = now.to_msg()  # Add timestamp for ROS 0.10
         for stat in msg:
-            stat.name = self.node.get_name() + ': ' + stat.name
+            #stat.name = self.node.get_name() + ': ' + stat.name
             db = DiagnosticStatus()
             db.name = stat.name
             db.message = stat.message
